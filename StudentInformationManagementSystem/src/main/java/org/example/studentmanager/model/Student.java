@@ -37,7 +37,7 @@ public class Student {
     public void setGrade(String grade) {
         this.grade = grade;
     }
-    
+
 
     @Override
     public String toString() {
@@ -47,6 +47,13 @@ public class Student {
                 ", Department='" + Department + '\'' +
                 ", grade='" + grade + '\'' +
                 '}';
+    }
+
+    public Student(String name, int studentID, String department, String grade) {
+        this.name = name;
+        StudentID = studentID;
+        Department = department;
+        this.grade = grade;
     }
 
     public static void main(String[] args) {
