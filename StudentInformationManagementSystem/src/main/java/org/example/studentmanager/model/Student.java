@@ -1,10 +1,26 @@
 package org.example.studentmanager.model;
 
 public class Student {
+
+    private int id;
     private String name;
-    private int StudentID;
     private String Department;
-    private String grade;
+    private int year;
+
+    public Student(int id, String name, String department, int year) {
+        this.id = id;
+        this.name = name;
+        Department = department;
+        this.year = year;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -12,14 +28,6 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getStudentID() {
-        return StudentID;
-    }
-
-    public void setStudentID(int studentID) {
-        StudentID = studentID;
     }
 
     public String getDepartment() {
@@ -30,30 +38,22 @@ public class Student {
         Department = department;
     }
 
-    public String getGrade() {
-        return grade;
+    public int getYear() {
+        return year;
     }
 
-    public void setGrade(String grade) {
-        this.grade = grade;
+    public void setYear(int year) {
+        this.year = year;
     }
-
 
     @Override
     public String toString() {
         return "Student{" +
-                "name='" + name + '\'' +
-                ", StudentID=" + StudentID +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", Department='" + Department + '\'' +
-                ", grade='" + grade + '\'' +
+                ", year=" + year +
                 '}';
-    }
-
-    public Student(String name, int studentID, String department, String grade) {
-        this.name = name;
-        StudentID = studentID;
-        Department = department;
-        this.grade = grade;
     }
 
     public static void main(String[] args) {
